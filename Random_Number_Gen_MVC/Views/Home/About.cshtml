@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>About</h2>
+<br />
+Hello <span style="color: #333399;">Pandell</span> team. My name is Michael Reina. I have been exposed to the world of technology since I was a young man.
+My first attempt at web design was in 2002, when I made a fan page in my collaboration with the imbNes NES Emulator for
+the PSX (it's still <a href="http://michaelreina.tripod.com/id87.htm">there</a> crazy, don't judge me!). Ever since then,
+I have been interested in web design and applications.
+<h3>The App</h3>
+<h4>Getting things going</h4>
+In this application, I attempted to show my thought pattern when developing web apps. As much as I am able, I try to
+make my apps scalable, which is why I chose to go with an MVC approach. I had to do a lot of reading and learning, since I
+had never used the Microsoft MVC 5 framework. The visual studio template included some standard JavaScript libraries, some of which I used,
+others I had to add them from the NuGet Package Manager. I also chose to rely on the Bootstrap library for overall styling.
+<h4>Ajax Adventures</h4>
+My first few thoughts, after deciding setting up my development environment, were to have the option to show the list
+of numbers as a single-column list and a grid. So I decided to use Ajax, with the intention of preserving the randomness of
+the generated array. I tried TempData, Session, and other approaches to save the array in between clicks, but I definitely
+needed to learn more about that and time did not permit. Having said that, I did spend a lot of time trying to figure
+that out and I left some code behind to show my approach. Other than that, the only issues I had with the Ajax implementation
+were so simple as to using the correct html property :).
+<h4>Layouts, Views, and Controllers</h4>
+When I told a friend I was using an MVC approach for this assignment, he said "a sledge hammer meets a nail" --he was right, but I wanted to push myself and show that I could make the app scalable.  I proceeded to add a Layout page to serve as a template for future pages. I then added a main view for my main Index, where the list of numbers would be displayed. I then used some PartialViews to use along my Ajax idea.
+
+I created a home controller that would take care of all the negotiations between the model (I decided to use ViewBags instead to speed things up) and the views. The home controller ended up creating the array and passing it via ViewBags to the respective views.
+<h4>Lessons Learned &amp; Wishes</h4>
+&nbsp;
+
+I am rarely satisfied with any of my work, even the good stuff that makes me smile once I am done. I am constantly thinking and researching new ways to enhance the user experience, be it through speed enhancements, UI tweaks, or content. I am content with the work I have done with this app, but not satisfied.
+
+What I would have liked to include in version 2:
+<ul>
+    <li>Performance: Once of the enhancements I would look into is the making the views faster. Generating the list/grid takes too much time, in my opinion. It may have been my computer's speed, but I did notice a lag when switching between partial views in Ajax.</li>
+    <li>Sessions: I really need to take a deeper dive into session management in ASP.NET. I would have loved to have kept the originally generated array and just change its appearance between the List and Grid Views. I may just have to do that in my spare time.</li>
+    <li>Models: One area I did not cover in this implementation was models. I would repurpose the app to use a model instead of the ViewBag. This would would help with the scalability of the app.</li>
+</ul>
+<h4>Closing Comments</h4>
+Overall, this has been an awesome experience and am reminded of how rewarding it is to learn something new and see it working. I hope this implementation is of your liking. I really love the work Pandell is doing and the awesome culture you guys have. Thanks!
+
+<br />
+<br />
+<blockquote class="blockquote-reverse">
+    <p>"It only takes a fraction of a second for someone to change time forever."</p>
+    <footer>Michael Reina, from <cite title="Source Title"><em>Awesome Things I Have Said</em></cite></footer>
+</blockquote>
+
+
+

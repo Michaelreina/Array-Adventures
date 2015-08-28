@@ -1,0 +1,32 @@
+﻿<!--[Grid View]
+    This is one of the two partial views which I used to implement Ajax calls. Razor syntax is used throughout the view.
+    This one is in charge of iterating throught the RandomNumbers array stored in the ViewBag
+    and finally printing it in a Bootstrap-styled table.
+    I chose to use the Html.Raw function to insert some of the table elements for this grid. Razor didn't like my
+    initial approach.
+    -->
+<table class="table table-striped">
+    <tbody>
+        @{int rowSentinel = 0;
+
+            foreach (int randNum in ViewBag.RandomNumbers)
+            {
+                if (rowSentinel == 0)
+                {@Html.Raw("<tr>")}
+
+                @Html.Raw("<td>")
+                @randNum;
+                @Html.Raw("</ td >")
+
+                rowSentinel++;
+                if (rowSentinel == 6)
+                {
+                    @Html.Raw("</tr>")
+                    rowSentinel = 0;
+                }
+            }
+
+        }
+    </tbody>
+</table>
+        

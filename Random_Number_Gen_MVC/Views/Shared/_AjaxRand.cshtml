@@ -1,0 +1,19 @@
+﻿<!--[List View]
+    This is one of the two partial views which I used to implement AJAX calls. Razor syntax is used throughout the view.
+    This one is in charge of iterating throught the RandomNumbers array stored in the ViewBag
+    and finally printing it in a Bootstrap-styled table.
+    -->
+<table class="table table-striped">
+    <tbody>
+        @{foreach (int randNum in ViewBag.RandomNumbers) 
+            {
+
+                <tr>
+                    <td>@randNum</td>
+                </tr>
+
+            }
+        }
+    </tbody>
+</table>
+
