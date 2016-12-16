@@ -1,2 +1,2 @@
-# Pandell_MR_Submission
-Submission of project
+# Array Adventures
+Playing around with arrays in C#
